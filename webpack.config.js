@@ -1,0 +1,40 @@
+var webpack = require('webpack');
+
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require('path');
+
+var BUILD_DIR = path.resolve(__dirname, 'build');
+var APP_DIR = path.resolve(__dirname, 'src');
+
+var config = {
+  entry: APP_DIR + '/index.jsx',
+  output: {
+    path: BUILD_DIR,
+    filename: 'bundle.js'
+  },
+  module: {
+      loaders: [
+          {
+              test: /\.jsx?$/,
+              include: APP_DIR,
+              loader: 'babel-loader'
+          },
+          {
+              test: /\.css/,
+              include: APP_DIR,
+              loader: 'style-loader!css-loader'
+          }
+      ]
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+        inject: true,
+        template: APP_DIR + "/index.html",
+      })
+  ],
+  devServer: {
+      contentBase: './build'
+  }
+};
+
+module.exports = config;

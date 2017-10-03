@@ -1,0 +1,19 @@
+html, body {
+    height: 100%;
+    background-color: rgb(244, 244, 244);
+    
+}
+.main-container {
+    max-width: 960px;
+    margin: 0 auto;
+    height: 100%;
+    border: 1px solid #bbbbbb;
+    background-color: #ffffff;
+    padding: 50px
+}
+.center-content {
+    /* justify-content: center; */
+}
+.centered-content {
+    margin: 0 auto;
+}

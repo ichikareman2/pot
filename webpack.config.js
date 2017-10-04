@@ -1,15 +1,15 @@
-var webpack = require('webpack');
+let webpack = require('webpack');
+let path = require('path');
 
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var path = require('path');
+let HtmlWebpackPlugin = require('html-webpack-plugin');
 
-var BUILD_DIR = path.resolve(__dirname, 'build');
-var APP_DIR = path.resolve(__dirname, 'src');
+let BUILD_DIR = path.resolve(__dirname, 'build');
+let APP_DIR = path.resolve(__dirname, 'src');
 
-var config = {
-  entry: APP_DIR + '/web/index.jsx',
+let webConfig = {
+  entry: path.join(APP_DIR, '/web/index.jsx'),
   output: {
-    path: BUILD_DIR + '/web',
+    path: path.join(BUILD_DIR, '/web'),
     filename: 'bundle.js'
   },
   module: {
@@ -29,12 +29,16 @@ var config = {
   plugins: [
     new HtmlWebpackPlugin({
         inject: true,
-        template: APP_DIR + "/web/index.html",
+        template: path.join(APP_DIR, "/web/index.html"),
       })
   ],
   devServer: {
-      contentBase: './web/build'
+      contentBase: path.join(BUILD_DIR,'/web')
   }
 };
 
-module.exports = config;
+let apiConfig = {
+    entry: path.join(APP_DIR, '/index.jsx')
+}
+
+module.exports = webConfig;

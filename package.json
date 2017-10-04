@@ -6,6 +6,7 @@
   "dependencies": {
     "express": "^4.16.1",
     "javascript-debounce": "^1.0.0",
+    "path": "^0.12.7",
     "query-string": "^5.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

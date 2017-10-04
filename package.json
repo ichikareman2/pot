@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "express": "^4.16.1",
     "javascript-debounce": "^1.0.0",
     "query-string": "^5.0.0",
     "react": "^15.6.1",

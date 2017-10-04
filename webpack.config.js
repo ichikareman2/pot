@@ -7,9 +7,9 @@ var BUILD_DIR = path.resolve(__dirname, 'build');
 var APP_DIR = path.resolve(__dirname, 'src');
 
 var config = {
-  entry: APP_DIR + '/index.jsx',
+  entry: APP_DIR + '/web/index.jsx',
   output: {
-    path: BUILD_DIR,
+    path: BUILD_DIR + '/web',
     filename: 'bundle.js'
   },
   module: {
@@ -29,11 +29,11 @@ var config = {
   plugins: [
     new HtmlWebpackPlugin({
         inject: true,
-        template: APP_DIR + "/index.html",
+        template: APP_DIR + "/web/index.html",
       })
   ],
   devServer: {
-      contentBase: './build'
+      contentBase: './web/build'
   }
 };
 

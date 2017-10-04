@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.16.1",
     "javascript-debounce": "^1.0.0",
     "path": "^0.12.7",
     "query-string": "^5.0.0",
@@ -27,8 +26,8 @@
     "webpack-dev-server": "^2.7.1"
   },
   "scripts": {
-    "build": "node_modules/.bin/webpack -d",
-    "serve": "webpack-dev-server --open"
+    "build": "node_modules/.bin/webpack -d --config web.config.js",
+    "serve": "webpack-dev-server --open --config web.config.js"
   },
   "keywords": [],
   "author": "",

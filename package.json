@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "javascript-debounce": "^1.0.0",
+    "octicons": "^7.0.1",
     "path": "^0.12.7",
     "query-string": "^5.0.0",
     "react": "^15.6.1",

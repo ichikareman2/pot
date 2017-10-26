@@ -2,20 +2,22 @@
 Todo:
  Browse files:
     ✔ list files and folders
-    ☐ discern files and folders @frontend
-      ☐ show icon
-      ☐ hide download button
+    ✔ discern files and folders @frontend
+      ✔ show icon
+      ✔ hide download button
     ☐ change directory
-      - plan is to add param to browse endpoint
+      plan is to add param to browse endpoint
       ☐ add param to browse endpoint @api
       ☐ make folders clickable @frontend
       ☐ clicking folders will change current directory to that folder @frontend
+      ☐ directory path on top
     ☐ add home button
+    ☐ preview for known file types
   
   Download files:
     ☐ Download ajax
       ✔ put a button for download @frontend 
-      ✔ clicking download button should prompt download @inprogress
+      ✔ clicking download button should prompt download 
     ✔ make download endpoint @api 
 
   Upload files:

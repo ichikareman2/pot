@@ -37,29 +37,33 @@ class FileList extends Component {
     render() {
         let files = this.state.files.map((x, i) => {
             let fileDownload;
-            if(x.isFile){
+            if (x.isFile) {
                 fileDownload = (
-                    <FileDownload filename={x.file}/>
+                    <FileDownload filename={x.file} />
                 )
             }
-            else{
+            else {
                 fileDownload = <Octicon name="file-directory" />
             }
             return (
-                <div key={x.file}>
-                    <div className="row">
-                        {fileDownload}
-                        <div className="col-sm"><h5>{x.file}</h5></div>
-                    </div>
+                <div key={x.file} className="row">
+                    <div className="col">
+                        <div className="row">
+                            <div className="col-auto">
+                                {fileDownload}
+                            </div>
+                            <div className="col-sm"><h5>{x.file}</h5></div>
+                        </div>
 
-                    <div className="row">
-                        <div className="col-sm">size: {x.size}</div>
+                        <div className="row">
+                            <div className="col-sm">size: {x.size}</div>
+                        </div>
                     </div>
                 </div>
             );
         })
         return (
-            <div className="file-item">
+            <div className="container">
                 {files}
             </div>
         );

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import * as octicons from 'octicons';
-import Octicon from '../octicon/octicon.jsx';
+// import Octicon from '../octicon/octicon.jsx';
+import FileDownload from './fileDownload.jsx'
 
 class FileList extends Component {
     constructor(props) {
@@ -38,9 +39,7 @@ class FileList extends Component {
             return (
                 <div key={x.file}>
                     <div className="row">
-                        <button>
-                            {<Octicon name="cloud-download" />}
-                        </button>
+                        <FileDownload filename={x.file}/>
                         <div className="col-sm"><h5>{x.file}</h5></div>
                     </div>
 

@@ -13,9 +13,9 @@ Todo:
   
   Download files:
     ☐ Download ajax
-      ✔ put a button for download @frontend @inProgress
-      ☐ clicking download button should prompt download
-    ☐ make download endpoint @api @inProgress
+      ✔ put a button for download @frontend 
+      ✔ clicking download button should prompt download @inprogress
+    ✔ make download endpoint @api 
 
   Upload files:
     ✔ upload a file

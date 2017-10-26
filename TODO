@@ -4,6 +4,7 @@ Todo:
     ✔ list files and folders
     ☐ discern files and folders @frontend
       ☐ show icon
+      ☐ hide download button
     ☐ change directory
       - plan is to add param to browse endpoint
       ☐ add param to browse endpoint @api

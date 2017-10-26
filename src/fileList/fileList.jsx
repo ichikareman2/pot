@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import * as octicons from 'octicons';
-// import Octicon from '../octicon/octicon.jsx';
+import Octicon from '../octicon/octicon.jsx';
 import FileDownload from './fileDownload.jsx'
 
 class FileList extends Component {
@@ -36,10 +36,19 @@ class FileList extends Component {
 
     render() {
         let files = this.state.files.map((x, i) => {
+            let fileDownload;
+            if(x.isFile){
+                fileDownload = (
+                    <FileDownload filename={x.file}/>
+                )
+            }
+            else{
+                fileDownload = <Octicon name="file-directory" />
+            }
             return (
                 <div key={x.file}>
                     <div className="row">
-                        <FileDownload filename={x.file}/>
+                        {fileDownload}
                         <div className="col-sm"><h5>{x.file}</h5></div>
                     </div>
 

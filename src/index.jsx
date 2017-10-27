@@ -11,15 +11,16 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      path:'/'
+      currentDirectory: []
     }
   }
+  
   render() {
     return (
       <div>
-        <Directory path={this.state.path} />
+        <Directory path={this.state.currentDirectory} />
         <UploadInput />
-        <FileList />
+        <FileList path={this.state.currentDirectory}/>
       </div>
     )
   }

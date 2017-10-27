@@ -13,7 +13,7 @@ class Directory extends Component {
                         <button><Octicon name="home" /></button>
                     </div>
                     <div className="col">
-                        <h4>{this.props.path}</h4>
+                        <h4>{this.props.path.join('/')}</h4>
                     </div>
                 </div>
             </div>

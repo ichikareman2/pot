@@ -5,14 +5,17 @@ Todo:
     ✔ discern files and folders @frontend
       ✔ show icon
       ✔ hide download button
-    ☐ change directory
+    ☐ change directory @inprogress
       plan is to add param to browse endpoint
-      ☐ add param to browse endpoint @api
-      ☐ make folders clickable @frontend
-      ☐ clicking folders will change current directory to that folder @frontend
-      ☐ directory path on top
-    ☐ add home button
+      ✔ add param to browse endpoint @api
+      ☐ make folders clickable @frontend @inprog
+      ☐ clicking folders will change current directory to that folder @frontend @inprog
+      ☐ directory path on top @frontend @inprog
+        ✔ directory component to show directory
+        ☐ each dir is clickable ex: / asdf (clickable) / ghjk (clickable)
+      ☐ add home button
     ☐ preview for known file types
+    ☐ file icon for known file types
   
   Download files:
     ☐ Download ajax

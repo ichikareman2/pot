@@ -9,15 +9,17 @@ class FileList extends Component {
         this.state = {
             files: []
         }
+        // this.changeDirectory = this.props.changeDirectory;
     }
     componentDidMount() {
-        this.browse()
+        let pathString = this.props.path.join('/')
+        this.browse(pathString)
     }
-    browse() {
+    browse(pathString) {
         // let data = new FormData();
         // data.append("file", this.state.files[0])
 
-        fetch(`http://localhost:3000/browse`,
+        fetch(`http://localhost:3000/browse/${encodeURI(pathString)}`,
             {
                 method: "GET",
                 // headers: {
@@ -52,7 +54,11 @@ class FileList extends Component {
                             <div className="col-auto">
                                 {fileDownload}
                             </div>
-                            <div className="col-sm"><h5>{x.file}</h5></div>
+                            <div className="col-sm">
+                                
+                                    <h5>{x.file}</h5>
+                                
+                            </div>
                         </div>
 
                         <div className="row">

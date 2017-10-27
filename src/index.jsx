@@ -13,6 +13,7 @@ class App extends React.Component {
     this.state = {
       currentDirectory: []
     }
+    this.changeDirectory = this.changeDirectory.bind(this)
   }
   
   render() {
@@ -20,9 +21,15 @@ class App extends React.Component {
       <div>
         <Directory path={this.state.currentDirectory} />
         <UploadInput />
-        <FileList path={this.state.currentDirectory}/>
+        <FileList path={this.state.currentDirectory} changeDirectory={this.changeDirectory}/>
       </div>
     )
+  }
+
+  changeDirectory (newCurrentDirectory) {
+    this.setState({
+      currentDirectory: newCurrentDirectory
+    })
   }
 }
 

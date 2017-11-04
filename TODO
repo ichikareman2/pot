@@ -10,10 +10,10 @@ Todo:
       ✔ add param to browse endpoint @api
       ✔ make folders clickable @frontend
       ✔ clicking folders will change current directory to that folder @frontend
-      ☐ directory path on top @frontend @inprog
+      ✔ directory path on top @frontend @inprog
         ✔ directory component to show directory
-        ☐ each dir is clickable ex: / asdf (clickable) / ghjk (clickable)
-        ☐ Home button needs to be clickable to return to root dir
+        ✔ each dir is clickable ex: / asdf (clickable) / ghjk (clickable)
+        ✔ Home button needs to be clickable to return to root dir
       ☐ add home button
     ☐ preview for known file types
     ☐ file icon for known file types

@@ -10,11 +10,11 @@ Todo:
       ✔ add param to browse endpoint @api
       ✔ make folders clickable @frontend
       ✔ clicking folders will change current directory to that folder @frontend
-      ✔ directory path on top @frontend @inprog
+      ✔ directory path on top @frontend
         ✔ directory component to show directory
         ✔ each dir is clickable ex: / asdf (clickable) / ghjk (clickable)
         ✔ Home button needs to be clickable to return to root dir
-      ☐ add home button
+      ✔ add home button
     ☐ preview for known file types
     ☐ file icon for known file types
   
@@ -28,10 +28,14 @@ Todo:
     ✔ upload a file
     ☐ confirm whether file exist and ask if it is ok to overwrite
       plan is a new parameter force, if true, overwrite, else, send error and message that file exists
-    ☐ upload file to current directory
+    ✔ upload file to current directory
+      ✔ add new nullable parameter to upload endpoint @api
+      ✔ change ajax request to add parameter to request @frontend
+    ☐ refresh file list whenever upload finish @inprog
 
   Login, Roles:
 
 
-  Improvements:
+  Improvements, bugs:
     ☐ for directory component, add a component to contain each part of directory since they all have same style? (composition vs inheritance)
+    ☐ list getting too long, page border doesnt adjust

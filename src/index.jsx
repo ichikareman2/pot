@@ -20,7 +20,7 @@ class App extends React.Component {
     return (
       <div>
         <Directory path={this.state.currentDirectory} changeDirectory={this.changeDirectory} />
-        <UploadInput />
+        <UploadInput path={this.state.currentDirectory}/>
         <FileList path={this.state.currentDirectory} changeDirectory={this.changeDirectory} />
       </div>
     )

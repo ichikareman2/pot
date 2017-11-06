@@ -13,9 +13,10 @@ class UploadInput extends Component {
 
     upload() {
         let data = new FormData();
+        let pathString = this.props.path.join('/');
         data.append("file", this.state.files[0])
 
-        fetch(`http://localhost:3000/upload`,
+        fetch(`http://localhost:3000/upload/${encodeURIComponent(pathString)}`,
             {
                 method: "POST",
                 // headers: {

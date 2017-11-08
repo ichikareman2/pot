@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import * as octicons from 'octicons';
-import Octicon from '../octicon/octicon.jsx';
+import Octicon from '../../octicon/octicon.jsx';
 
 class FileDownload extends Component {
     constructor(props) {

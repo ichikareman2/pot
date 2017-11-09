@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import * as octicons from 'octicons';
-import Octicon from '../octicon/octicon.jsx';
+import Octicon from '../../octicon/octicon.jsx';
 
 class FileDownload extends Component {
     constructor(props) {
@@ -9,13 +9,8 @@ class FileDownload extends Component {
         this.download = this.download.bind(this)
     }
     download() {
-        // fetch(`http://localhost:3000/download/${filename}`, {
-        //     method: "GET"
-        // }).then(data => {
-        //     return data.blob()
-        // })
-        console.log(this.props)
-        let win = window.open(`http://localhost:3000/download/${this.props.filename}`, "_blank")
+        let filename = encodeURIComponent(this.props.filename)
+        let win = window.open(`http://localhost:3000/download/${filename}`, "_blank")
         win.focus();
     }
     render() {

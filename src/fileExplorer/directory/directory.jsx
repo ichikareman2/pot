@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Octicon from '../octicon/octicon.jsx'
+import Octicon from '../../octicon/octicon.jsx'
 
 class Directory extends Component {
     constructor(props) {

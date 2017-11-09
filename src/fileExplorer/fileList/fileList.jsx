@@ -46,8 +46,9 @@ class FileList extends Component {
         let files = this.state.files.map((x, i) => {
             let fileDownload, cd;
             if (x.isFile) {
+                let filename = [this.props.path.join('/'), x.file].join('/')
                 fileDownload = (
-                    <FileDownload filename={x.file} />
+                    <FileDownload filename={filename} />
                 )
                 cd = (
                     <h5>{x.file}</h5>

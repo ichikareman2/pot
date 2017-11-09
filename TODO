@@ -5,7 +5,7 @@ Todo:
     ✔ discern files and folders @frontend
       ✔ show icon
       ✔ hide download button
-    ☐ change directory @inprogress
+    ✔ change directory @done(17-11-09 22:38)
       plan is to add param to browse endpoint
       ✔ add param to browse endpoint @api
       ✔ make folders clickable @frontend
@@ -22,6 +22,7 @@ Todo:
     ☐ Download ajax
       ✔ put a button for download @frontend 
       ✔ clicking download button should prompt download 
+      ✔ FIX: Download files from current directory @inprog @done(17-11-09 22:45)
     ✔ make download endpoint @api 
 
   Upload files:

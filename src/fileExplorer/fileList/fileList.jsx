@@ -6,44 +6,12 @@ import FileDownload from './fileDownload.jsx'
 class FileList extends Component {
     constructor(props) {
         super(props)
-        this.state = {
-            files: []
-        }
-        // this.changeDirectory = this.changeDirectory.bind(this);
-    }
-    componentDidMount() {
-        let pathString = this.props.path.join('/')
-        this.browse(pathString)
-    }
-    componentWillReceiveProps(newProps) {
-        let pathString = newProps.path.join('/')
-        this.browse(pathString)
-    }
-    browse(pathString) {
-        // let data = new FormData();
-        // data.append("file", this.state.files[0])
-
-        fetch(`http://localhost:3000/browse/${encodeURIComponent(pathString)}`,
-            {
-                method: "GET",
-                // headers: {
-                //     "Content-type": "image"
-                // },
-                // body: this.state.files[0]
-                // body: data
-            }).then((data) => {
-                return data.json()
-            }).then((json) => {
-                this.setState({
-                    files: json
-                })
-            })
     }
     changeDirectory(newCurrentDirectory) {
         this.props.changeDirectory(newCurrentDirectory);
     }
     render() {
-        let files = this.state.files.map((x, i) => {
+        let files = this.props.files.map((x, i) => {
             let fileDownload, cd;
             if (x.isFile) {
                 let filename = [this.props.path.join('/'), x.file].join('/')

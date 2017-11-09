@@ -9,6 +9,7 @@ class UploadInput extends Component {
         
         this.selectFile = this.selectFile.bind(this)
         this.upload = this.upload.bind(this)
+        this.refresh = this.props.refresh.bind(this)
     }
 
     upload() {
@@ -24,6 +25,10 @@ class UploadInput extends Component {
                 // },
                 // body: this.state.files[0]
                 body: data
+            }).then((data) => {
+                if(data.status === 200){
+                    this.refresh(this.props.path)
+                }
             })
     }
 

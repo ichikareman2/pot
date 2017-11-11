@@ -40,3 +40,4 @@ Todo:
   Improvements, bugs:
     ☐ for directory component, add a component to contain each part of directory since they all have same style? (composition vs inheritance)
     ☐ list getting too long, page border doesnt adjust
+    ☐ logs

@@ -25,6 +25,14 @@ Todo:
       ✔ FIX: Download files from current directory @done(17-11-09 22:45)
     ✔ make download endpoint @api 
 
+  Create folder:
+
+
+  Delete files:
+    add a button on every file in file list in frontend?
+
+  Bulk Operations:
+
   Upload files:
     ✔ upload a file
     ☐ confirm whether file exist and ask if it is ok to overwrite
@@ -35,9 +43,23 @@ Todo:
     ✔ refresh file list whenever upload finish @done(17-11-10 01:18)
 
   Login, Roles:
-
+  
+  Socket.IO:
 
   Improvements, bugs:
+    ☐ look into form.parse callback @api
+    ☐ FIX: temporary folder should not show up in root.. @api
+      hide it or better yet, make a folder for pot-api related files and make separate folder for destination and temporary files
+    ☐ potapi closes on unhandled exceptions @api
+    look into error handling in express docs 
+    ✔ upload file creates its own folder @api @done(17-11-12 08:53)
+    remove mkdir from upload file
+    ✔ browse endpoint should not show the whole path to the file @api @done(17-11-12 08:54)
+      remove path property since it is not going to be used
     ☐ for directory component, add a component to contain each part of directory since they all have same style? (composition vs inheritance)
     ☐ list getting too long, page border doesnt adjust
-    ☐ logs
+    ☐ logs @api
+    ✔ on startup, make sure destination exists @api @done(17-11-12 01:52)
+      make sure the directory to upload files to, pointed in the config, exists, if not make it, if error, stop the application logging the problem
+    ☐ make commands/build for production and dev @api
+    ☐ make commands/build for production and dev @frontend

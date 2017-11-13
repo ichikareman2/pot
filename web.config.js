@@ -1,10 +1,11 @@
-let webpack = require('webpack');
-let path = require('path');
+const webpack = require('webpack');
+const path = require('path');
 
-let HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-let BUILD_DIR = path.resolve(__dirname, 'build');
-let APP_DIR = path.resolve(__dirname, 'src');
+const config = require('config');
+const BUILD_DIR = path.resolve(__dirname, 'build');
+const APP_DIR = path.resolve(__dirname, 'src');
 
 let webConfig = {
     entry: path.join(APP_DIR, '/index.jsx'),
@@ -31,7 +32,8 @@ let webConfig = {
             inject: true,
             template: path.join(APP_DIR, "/index.html"),
         }),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.DefinePlugin(config)
     ],
     devServer: {
         contentBase: BUILD_DIR,

@@ -47,7 +47,7 @@ Todo:
   Socket.IO:
 
   Improvements, bugs:
-    ☐ FIX: pot webapp calls to localhost endepoints. 
+    ☐ FIX: pot webapp calls to localhost endepoints. @frontend
     add config for changing endpoint base urls
     look for environemt variables in webpack
     ☐ look into form.parse callback @api

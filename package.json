@@ -13,6 +13,7 @@
     "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
+    "config": "^1.28.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
@@ -27,7 +28,7 @@
     "webpack-dev-server": "^2.9.4"
   },
   "scripts": {
-    "build": "node_modules/.bin/webpack -d --config web.config.js",
+    "build": "webpack -d --config web.config.js",
     "serve": "webpack-dev-server --open --config web.config.js"
   },
   "keywords": [],

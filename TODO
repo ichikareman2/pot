@@ -47,6 +47,9 @@ Todo:
   Socket.IO:
 
   Improvements, bugs:
+    ☐ FIX: pot webapp calls to localhost endepoints. 
+    add config for changing endpoint base urls
+    look for environemt variables in webpack
     ☐ look into form.parse callback @api
     ☐ FIX: temporary folder should not show up in root.. @api
       hide it or better yet, make a folder for pot-api related files and make separate folder for destination and temporary files

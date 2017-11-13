@@ -28,8 +28,8 @@
     "webpack-dev-server": "^2.9.4"
   },
   "scripts": {
-    "build": "webpack -d --config web.config.js",
-    "serve": "webpack-dev-server --open --config web.config.js"
+    "build": "webpack -p --env.production --config web.config.js --progress",
+    "serve": "webpack-dev-server -d --open --config web.config.js"
   },
   "keywords": [],
   "author": "",

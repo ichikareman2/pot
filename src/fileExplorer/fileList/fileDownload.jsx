@@ -10,7 +10,7 @@ class FileDownload extends Component {
     }
     download() {
         let filename = encodeURIComponent(this.props.filename)
-        let win = window.open(`http://localhost:3000/download/${filename}`, "_blank")
+        let win = window.open(`http://${POTAPIBASEURL}/download/${filename}`, "_blank")
         win.focus();
     }
     render() {

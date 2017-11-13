@@ -50,10 +50,14 @@ Todo:
     ☐ FIX: pot webapp calls to localhost endepoints. @frontend
     add config for changing endpoint base urls
     look for environemt variables in webpack
+      ✔ make config @done(17-11-14 04:39)
+      ✔ webpack build should know what environment to build for @done(17-11-14 05:30)
+      ✔ use config value for base urls when using api @done(17-11-14 06:27)
     ☐ look into form.parse callback @api
     ☐ FIX: temporary folder should not show up in root.. @api
       hide it or better yet, make a folder for pot-api related files and make separate folder for destination and temporary files
     ☐ potapi closes on unhandled exceptions @api
+    ☐ make api as restful as current knowledge can make
     look into error handling in express docs 
     ✔ upload file creates its own folder @api @done(17-11-12 08:53)
     remove mkdir from upload file

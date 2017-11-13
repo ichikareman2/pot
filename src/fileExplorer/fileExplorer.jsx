@@ -48,7 +48,7 @@ class FileExplorer extends React.Component {
   }
   updateFiles(path) {
     let pathString = path.join('/')
-    fetch(`http://localhost:3000/browse/${encodeURIComponent(pathString)}`,
+    fetch(`http://${POTAPIBASEURL}/browse/${encodeURIComponent(pathString)}`,
       {
         method: "GET",
       }).then((data) => {

@@ -47,15 +47,22 @@ Todo:
   Socket.IO:
 
   Improvements, bugs:
-    ☐ FIX: pot webapp calls to localhost endepoints. @frontend
+    ☐ make progress bar of upload
+      ☐ return progress change like on progress(45%) to notify front end @api
+        probably have to learn socket io.. check socket io or primus
+      ☐ get progress from api and make changes to some kind of progress bar @frontend
+        probably have to learn socket io implementation for receiving messages
+    ✔ FIX: pot webapp calls to localhost endepoints. @frontend @done(17-11-22 03:17)
     add config for changing endpoint base urls
     look for environemt variables in webpack
       ✔ make config @done(17-11-14 04:39)
       ✔ webpack build should know what environment to build for @done(17-11-14 05:30)
       ✔ use config value for base urls when using api @done(17-11-14 06:27)
     ☐ look into form.parse callback @api
-    ☐ FIX: temporary folder should not show up in root.. @api
+    ✔ FIX: temporary folder should not show up in root.. @api @done(17-11-22 03:30)
       hide it or better yet, make a folder for pot-api related files and make separate folder for destination and temporary files
+      CORRECTION: formidable api can just use the temporary folder of the computer. idk the implications but thats all simpler and easier
+      ✔ remove/comment creation of temp folder @done(17-11-22 03:30)
     ☐ potapi closes on unhandled exceptions @api
     ☐ make api as restful as current knowledge can make
     look into error handling in express docs 
